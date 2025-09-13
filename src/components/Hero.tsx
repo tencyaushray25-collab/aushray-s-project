@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Brain, BarChart3, Zap } from "lucide-react";
-import heroImage from "@/assets/hero-education.jpg";
+import heroImage from "@/assets/hero-education.webp";
 
 interface HeroProps {
   onGetStarted: () => void;
