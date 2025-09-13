@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Brain, BarChart3, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-education.webp";
+import { DemoModal } from "./DemoModal";
 
 interface HeroProps {
   onGetStarted: () => void;
 }
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
+  const [showDemo, setShowDemo] = useState(false);
+  
   const features = [
     { icon: BookOpen, label: "Smart Document Processing" },
     { icon: Brain, label: "AI-Powered Assessments" },
@@ -56,6 +60,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
             <Button 
               variant="outline" 
               size="lg"
+              onClick={() => setShowDemo(true)}
               className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
             >
               Watch Demo
@@ -76,6 +81,8 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           </div>
         </div>
       </div>
+      
+      <DemoModal open={showDemo} onOpenChange={setShowDemo} />
     </section>
   );
 };
