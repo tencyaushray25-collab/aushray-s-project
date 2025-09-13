@@ -34,9 +34,9 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Your Personal
+            Aushray's
             <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Study Assistant
+              Personal Study Assistant AI
             </span>
           </h1>
           
